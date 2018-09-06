@@ -1,0 +1,78 @@
+{
+  "Core": {
+    "sub": [
+      {"name": "container", "feat": ["travis-org", "coveralls"]},
+      {"name": "coroutine", "feat": ["travis-org", "coveralls"]},
+      {"name": "promise", "feat": ["travis-org", "coveralls"]},
+      {"name": "channel", "feat": ["travis-org", "coveralls"]},
+      {"name": "chain", "feat": ["travis", "coveralls"]},
+      {"name": "timer"}
+    ]
+  },
+  "Discovery": {
+    "sub": [
+      {"name": "consul"}
+    ]
+  },
+  "DevOps": {
+    "sub": [
+      {"name": "monitor"},
+      {"name": "tracing", "desc": "OpenTracing collector"},
+      {"name": "traced", "desc": "Jaeger/zipkin platform"},
+      {"name": "log"}
+    ]
+  },
+  "Resources": {
+    "sub": [
+      {"name": "config"},
+      {"name": "cluster"},
+      {"name": "pool"}
+    ]
+  },
+  "Servers": {
+    "sub": [
+      {"name": "console"},
+      {"name": "serving", "desc": "Shared server features"},
+      {"name": "web"}
+    ]
+  },
+  "RPC": {
+    "sub": [
+      {"name": "rpc", "desc": "Protocol base"},
+      {"name": "hrpc", "desc": "HTTP based RPC server"},
+      {"name": "hrpcc", "desc": "HTTP based RPC client"}
+    ]
+  },
+  "Network": {
+    "sub": [
+      {"name": "net", "desc": "Base types and APIs contracted"},
+      {"name": "dns"},
+      {"name": "psr7", "desc": "PSR-7 standard implements"},
+      {"name": "http"},
+      {"name": "socket"}
+    ]
+  },
+  "Queue": {
+    "sub": [
+      {"name": "nsq"}
+    ]
+  },
+  "Storage": {
+    "sub": [
+      {"name": "database", "desc": "Supports MySQL"},
+      {"name": "redis", "feat": ["travis", "coveralls"]},
+      {"name": "mysql", "desc": "SQL builder for MySQL"},
+      {"name": "cache"}
+    ]
+  },
+  "Utils": {
+    "sub": [
+      {"name": "dsn", "feat": ["travis-org"]},
+      {"name": "env"},
+      {"name": "i18n"},
+      {"name": "process"},
+      {"name": "shaping"},
+      {"name": "validator"}
+    ]
+  }
+}

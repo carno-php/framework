@@ -1,0 +1,94 @@
+#!/usr/bin/env php
+<?php
+
+define('VERSION', '~1.0@dev');
+define('COMPOSER', __DIR__ . '/composer.json');
+
+define('COMMON', __DIR__ . '/COMMON.md');
+define('README', __DIR__ . '/README.md');
+
+$packages = json_decode(file_get_contents(__DIR__ . '/packages.json'), true);
+
+$lines = $aliases = $components = [];
+
+foreach ($packages as $group => $package) {
+    $lines[] = sprintf('## %s', $group);
+    $lines[] = '';
+    foreach ($package['sub'] as $component) {
+        array_push($lines, ...gComponent($component['name'], $component['desc'] ?? '', $component['feat'] ?? []));
+        array_push($lines, "\n");
+        $components[] = $component['name'];
+    }
+}
+
+$lines[] = '';
+
+foreach ($aliases as $key => $url) {
+    $lines[] = sprintf('[%s]: %s', $key, $url);
+}
+
+file_put_contents(README, str_replace('{{GEN}}', implode("\n", $lines), file_get_contents(COMMON)));
+
+$composer = json_decode(file_get_contents(COMPOSER), true);
+
+$composer['require'] = [];
+foreach ($components as $name) {
+    $composer['require']["carno-php/{$name}"] = VERSION;
+}
+
+$json = json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$json = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $json);
+
+file_put_contents(COMPOSER, $json);
+
+exec('composer normalize');
+
+echo 'DONE';
+
+function gComponent(string $name, string $desc, array $features) : array
+{
+    $lines = [];
+
+    $lines[] = sprintf('#### [%s][%s]', $name, glFeature('url', $name));
+
+    if ($desc) {
+        $lines[] = '';
+        $lines[] = $desc;
+    }
+
+    $lines[] = '';
+
+    array_unshift($features, 'packagist');
+
+    foreach ($features as $feature) {
+        $lines[] = sprintf('![][%s]', glFeature($feature, $name));
+    }
+
+    return $lines;
+}
+
+function glFeature(string $type, string $name) : string
+{
+    global $aliases;
+
+    switch ($type) {
+        case 'url':
+            $aliases[$key = "url-{$name}"] = "https://github.com/carno-php/{$name}";
+            return $key;
+        case 'travis':
+            $aliases[$key = "bud-{$name}"] = "https://img.shields.io/travis/com/carno-php/{$name}/master.svg?style=flat-square";
+            return $key;
+        case 'travis-org':
+            $aliases[$key = "bud-{$name}"] = "https://img.shields.io/travis/carno-php/{$name}/master.svg?style=flat-square";
+            return $key;
+        case 'coveralls':
+            $aliases[$key = "cov-{$name}"] = "https://img.shields.io/coveralls/carno-php/{$name}/master.svg?style=flat-square";
+            return $key;
+        case 'packagist':
+            $aliases[$key = "pkg-{$name}"] = "https://img.shields.io/packagist/v/carno-php/{$name}.svg?style=flat-square";
+            return $key;
+    }
+
+    return '';
+}

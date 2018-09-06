@@ -1,0 +1,49 @@
+{
+  "name": "carno-php/framework",
+  "description": "Framework components collection",
+  "license": "MIT",
+  "require": {
+    "carno-php/cache": "~1.0@dev",
+    "carno-php/chain": "~1.0@dev",
+    "carno-php/channel": "~1.0@dev",
+    "carno-php/cluster": "~1.0@dev",
+    "carno-php/config": "~1.0@dev",
+    "carno-php/console": "~1.0@dev",
+    "carno-php/consul": "~1.0@dev",
+    "carno-php/container": "~1.0@dev",
+    "carno-php/coroutine": "~1.0@dev",
+    "carno-php/database": "~1.0@dev",
+    "carno-php/dns": "~1.0@dev",
+    "carno-php/dsn": "~1.0@dev",
+    "carno-php/env": "~1.0@dev",
+    "carno-php/hrpc": "~1.0@dev",
+    "carno-php/hrpcc": "~1.0@dev",
+    "carno-php/http": "~1.0@dev",
+    "carno-php/i18n": "~1.0@dev",
+    "carno-php/log": "~1.0@dev",
+    "carno-php/monitor": "~1.0@dev",
+    "carno-php/mysql": "~1.0@dev",
+    "carno-php/net": "~1.0@dev",
+    "carno-php/nsq": "~1.0@dev",
+    "carno-php/pool": "~1.0@dev",
+    "carno-php/process": "~1.0@dev",
+    "carno-php/promise": "~1.0@dev",
+    "carno-php/psr7": "~1.0@dev",
+    "carno-php/redis": "~1.0@dev",
+    "carno-php/rpc": "~1.0@dev",
+    "carno-php/serving": "~1.0@dev",
+    "carno-php/shaping": "~1.0@dev",
+    "carno-php/socket": "~1.0@dev",
+    "carno-php/timer": "~1.0@dev",
+    "carno-php/traced": "~1.0@dev",
+    "carno-php/tracing": "~1.0@dev",
+    "carno-php/validator": "~1.0@dev",
+    "carno-php/web": "~1.0@dev"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
