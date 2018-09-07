@@ -1,78 +1,78 @@
 {
   "Core": {
     "sub": [
-      {"name": "container", "feat": ["travis-org", "coveralls"]},
-      {"name": "coroutine", "feat": ["travis-org", "coveralls"]},
-      {"name": "promise", "feat": ["travis-org", "coveralls"]},
-      {"name": "channel", "feat": ["travis-org", "coveralls"]},
-      {"name": "chain", "feat": ["travis", "coveralls"]},
+      {"name": "container", "desc": "Dependency injection implements PSR-11", "feat": ["travis-org", "coveralls"]},
+      {"name": "coroutine", "desc": "Native coroutine with yield for php7", "feat": ["travis-org", "coveralls"]},
+      {"name": "promise", "desc": "Promises/A+ implements with addition commands e.g. race, all", "feat": ["travis-org", "coveralls"]},
+      {"name": "channel", "desc": "Async piped works made simple", "feat": ["travis-org", "coveralls"]},
+      {"name": "chain", "desc": "Extensional logic layers for request/response flows", "feat": ["travis", "coveralls"]},
       {"name": "timer"}
     ]
   },
   "Discovery": {
     "sub": [
-      {"name": "consul"}
+      {"name": "consul", "desc": "Service registry/discovery and kv-store"}
     ]
   },
   "DevOps": {
     "sub": [
-      {"name": "monitor"},
+      {"name": "monitor", "desc": "Prometheus metrics pull/push", "feat": ["travis", "coveralls"]},
       {"name": "tracing", "desc": "OpenTracing collector"},
       {"name": "traced", "desc": "Jaeger/zipkin platform"},
-      {"name": "log"}
+      {"name": "log", "desc": "Dynamic logging format/receiver and supports logs replication"}
     ]
   },
   "Resources": {
     "sub": [
-      {"name": "config"},
-      {"name": "cluster"},
-      {"name": "pool"}
+      {"name": "config", "desc": "Dynamic config in-flight, backend supports Consul", "feat": ["travis", "coveralls"]},
+      {"name": "cluster", "desc": "Clustered resources made easy"},
+      {"name": "pool", "desc": "Connection pool for everything", "feat": ["travis", "coveralls"]}
     ]
   },
   "Servers": {
     "sub": [
       {"name": "console"},
       {"name": "serving", "desc": "Shared server features"},
-      {"name": "web"}
+      {"name": "web", "desc": "Flexible routes and controller powered"}
     ]
   },
   "RPC": {
     "sub": [
-      {"name": "rpc", "desc": "Protocol base"},
+      {"name": "rpc", "desc": "RPC protocol base"},
       {"name": "hrpc", "desc": "HTTP based RPC server"},
       {"name": "hrpcc", "desc": "HTTP based RPC client"}
     ]
   },
   "Network": {
     "sub": [
-      {"name": "net", "desc": "Base types and APIs contracted"},
+      {"name": "net", "desc": "Base types and APIs contracted", "feat": ["travis", "coveralls"]},
       {"name": "dns"},
       {"name": "psr7", "desc": "PSR-7 standard implements"},
-      {"name": "http"},
+      {"name": "http", "desc": "includes Client/Server/WebSocket", "feat": ["travis", "coveralls"]},
       {"name": "socket"}
     ]
   },
   "Queue": {
     "sub": [
-      {"name": "nsq"}
+      {"name": "nsq", "desc": "Publish/consuming with cluster, configurable for online migrating"}
     ]
   },
   "Storage": {
     "sub": [
-      {"name": "database", "desc": "Supports MySQL"},
+      {"name": "database", "desc": "Supports MySQL", "feat": ["travis", "coveralls"]},
       {"name": "redis", "feat": ["travis", "coveralls"]},
-      {"name": "mysql", "desc": "SQL builder for MySQL"},
-      {"name": "cache"}
+      {"name": "mysql", "desc": "SQL builder for MySQL", "feat": ["travis", "coveralls"]},
+      {"name": "cache", "feat": ["travis", "coveralls"]}
     ]
   },
   "Utils": {
     "sub": [
       {"name": "dsn", "feat": ["travis-org"]},
-      {"name": "env"},
+      {"name": "env", "feat": ["travis"]},
       {"name": "i18n"},
       {"name": "process"},
       {"name": "shaping"},
-      {"name": "validator"}
+      {"name": "validator", "feat": ["travis", "coveralls"]}
     ]
   }
 }

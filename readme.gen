@@ -62,7 +62,7 @@ function gComponent(string $name, string $desc, array $features) : array
     array_unshift($features, 'packagist');
 
     foreach ($features as $feature) {
-        $lines[] = sprintf('![][%s]', glFeature($feature, $name));
+        $lines[] = sprintf('[![][%s]][%s]', glFeature($feature, $name), glTarget($feature, $name));
     }
 
     return $lines;
@@ -74,19 +74,41 @@ function glFeature(string $type, string $name) : string
 
     switch ($type) {
         case 'url':
-            $aliases[$key = "url-{$name}"] = "https://github.com/carno-php/{$name}";
+            $aliases[$key = "src-url-{$name}"] = "https://github.com/carno-php/{$name}";
             return $key;
         case 'travis':
-            $aliases[$key = "bud-{$name}"] = "https://img.shields.io/travis/com/carno-php/{$name}/master.svg?style=flat-square";
+            $aliases[$key = "bud-ico-{$name}"] = "https://img.shields.io/travis/com/carno-php/{$name}/master.svg?style=flat-square";
             return $key;
         case 'travis-org':
-            $aliases[$key = "bud-{$name}"] = "https://img.shields.io/travis/carno-php/{$name}/master.svg?style=flat-square";
+            $aliases[$key = "bud-ico-{$name}"] = "https://img.shields.io/travis/carno-php/{$name}/master.svg?style=flat-square";
             return $key;
         case 'coveralls':
-            $aliases[$key = "cov-{$name}"] = "https://img.shields.io/coveralls/carno-php/{$name}/master.svg?style=flat-square";
+            $aliases[$key = "cov-ico-{$name}"] = "https://img.shields.io/coveralls/carno-php/{$name}/master.svg?style=flat-square";
             return $key;
         case 'packagist':
-            $aliases[$key = "pkg-{$name}"] = "https://img.shields.io/packagist/v/carno-php/{$name}.svg?style=flat-square";
+            $aliases[$key = "pkg-ico-{$name}"] = "https://img.shields.io/packagist/v/carno-php/{$name}.svg?style=flat-square";
+            return $key;
+    }
+
+    return '';
+}
+
+function glTarget(string $type, string $name) : string
+{
+    global $aliases;
+
+    switch ($type) {
+        case 'travis':
+            $aliases[$key = "bud-lnk-{$name}"] = "https://travis-ci.com/carno-php/{$name}";
+            return $key;
+        case 'travis-org':
+            $aliases[$key = "bud-lnk-{$name}"] = "https://travis-ci.org/carno-php/{$name}";
+            return $key;
+        case 'coveralls':
+            $aliases[$key = "cov-lnk-{$name}"] = "https://coveralls.io/r/carno-php/{$name}";
+            return $key;
+        case 'packagist':
+            $aliases[$key = "pkg-lnk-{$name}"] = "https://packagist.org/packages/carno-php/{$name}";
             return $key;
     }
 
