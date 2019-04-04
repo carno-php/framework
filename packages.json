@@ -50,7 +50,7 @@
       {"name": "dns", "desc":  "DNS resolver"},
       {"name": "psr7", "desc": "PSR-7 standard implements"},
       {"name": "http", "desc": "includes Client/Server/WebSocket", "feat": ["travis", "scrutinizer", "coveralls"]},
-      {"name": "socket", "desc":  "TCP/UDP socket"}
+      {"name": "socket", "desc":  "TCP/UDP socket", "feat": ["scrutinizer"]}
     ]
   },
   "Queue": {
@@ -71,8 +71,8 @@
       {"name": "dsn", "desc": "DSN parser", "feat": ["travis-org", "scrutinizer", "coveralls"]},
       {"name": "env", "desc": "ENV parser", "feat": ["travis", "scrutinizer", "coveralls"]},
       {"name": "i18n"},
-      {"name": "process", "desc": "Multi-process coordination framework"},
-      {"name": "shaping", "desc": "Token-Bucket based shaping control"},
+      {"name": "process", "desc": "Multi-process coordination framework", "feat": ["scrutinizer"]},
+      {"name": "shaping", "desc": "Token-Bucket based shaping control", "feat": ["scrutinizer"]},
       {"name": "validator", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   }

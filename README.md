@@ -255,6 +255,7 @@ includes Client/Server/WebSocket
 TCP/UDP socket
 
 [![][pkg-ico-socket]][pkg-lnk-socket]
+[![][scr-ico-socket]][scr-lnk-socket]
 
 
 ## Queue
@@ -341,6 +342,7 @@ ENV parser
 Multi-process coordination framework
 
 [![][pkg-ico-process]][pkg-lnk-process]
+[![][scr-ico-process]][scr-lnk-process]
 
 
 #### [shaping][src-url-shaping]
@@ -348,6 +350,7 @@ Multi-process coordination framework
 Token-Bucket based shaping control
 
 [![][pkg-ico-shaping]][pkg-lnk-shaping]
+[![][scr-ico-shaping]][scr-lnk-shaping]
 
 
 #### [validator][src-url-validator]
@@ -543,6 +546,8 @@ Token-Bucket based shaping control
 [src-url-socket]: https://github.com/carno-php/socket
 [pkg-ico-socket]: https://img.shields.io/packagist/v/carno-php/socket.svg?style=flat-square
 [pkg-lnk-socket]: https://packagist.org/packages/carno-php/socket
+[scr-ico-socket]: https://img.shields.io/scrutinizer/g/carno-php/socket.svg?style=flat-square
+[scr-lnk-socket]: https://scrutinizer-ci.com/g/carno-php/socket/
 [src-url-nsq]: https://github.com/carno-php/nsq
 [pkg-ico-nsq]: https://img.shields.io/packagist/v/carno-php/nsq.svg?style=flat-square
 [pkg-lnk-nsq]: https://packagist.org/packages/carno-php/nsq
@@ -608,9 +613,13 @@ Token-Bucket based shaping control
 [src-url-process]: https://github.com/carno-php/process
 [pkg-ico-process]: https://img.shields.io/packagist/v/carno-php/process.svg?style=flat-square
 [pkg-lnk-process]: https://packagist.org/packages/carno-php/process
+[scr-ico-process]: https://img.shields.io/scrutinizer/g/carno-php/process.svg?style=flat-square
+[scr-lnk-process]: https://scrutinizer-ci.com/g/carno-php/process/
 [src-url-shaping]: https://github.com/carno-php/shaping
 [pkg-ico-shaping]: https://img.shields.io/packagist/v/carno-php/shaping.svg?style=flat-square
 [pkg-lnk-shaping]: https://packagist.org/packages/carno-php/shaping
+[scr-ico-shaping]: https://img.shields.io/scrutinizer/g/carno-php/shaping.svg?style=flat-square
+[scr-lnk-shaping]: https://scrutinizer-ci.com/g/carno-php/shaping/
 [src-url-validator]: https://github.com/carno-php/validator
 [pkg-ico-validator]: https://img.shields.io/packagist/v/carno-php/validator.svg?style=flat-square
 [pkg-lnk-validator]: https://packagist.org/packages/carno-php/validator
