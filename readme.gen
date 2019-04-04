@@ -88,6 +88,9 @@ function glFeature(string $type, string $name) : string
         case 'packagist':
             $aliases[$key = "pkg-ico-{$name}"] = "https://img.shields.io/packagist/v/carno-php/{$name}.svg?style=flat-square";
             return $key;
+        case 'scrutinizer':
+            $aliases[$key = "scr-ico-{$name}"] = "https://img.shields.io/scrutinizer/g/carno-php/{$name}.svg?style=flat-square";
+            return $key;
     }
 
     return '';
@@ -109,6 +112,9 @@ function glTarget(string $type, string $name) : string
             return $key;
         case 'packagist':
             $aliases[$key = "pkg-lnk-{$name}"] = "https://packagist.org/packages/carno-php/{$name}";
+            return $key;
+        case 'scrutinizer':
+            $aliases[$key = "scr-lnk-{$name}"] = "https://scrutinizer-ci.com/g/carno-php/{$name}/";
             return $key;
     }
 

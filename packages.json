@@ -1,78 +1,79 @@
 {
   "Core": {
     "sub": [
-      {"name": "container", "desc": "Dependency injection implements PSR-11", "feat": ["travis-org", "coveralls"]},
-      {"name": "coroutine", "desc": "Native coroutine with yield for php7", "feat": ["travis-org", "coveralls"]},
-      {"name": "promise", "desc": "Promises/A+ implements with addition commands e.g. race, all", "feat": ["travis-org", "coveralls"]},
-      {"name": "channel", "desc": "Async piped works made simple", "feat": ["travis-org", "coveralls"]},
-      {"name": "chain", "desc": "Extensional logic layers for request/response flows", "feat": ["travis", "coveralls"]},
+      {"name": "container", "desc": "Dependency injection implements PSR-11", "feat": ["travis-org", "scrutinizer", "coveralls"]},
+      {"name": "coroutine", "desc": "Native coroutine with yield for php7", "feat": ["travis-org", "scrutinizer", "coveralls"]},
+      {"name": "promise", "desc": "Promises/A+ implements with addition commands e.g. race, all", "feat": ["travis-org", "scrutinizer", "coveralls"]},
+      {"name": "channel", "desc": "Async piped works made simple", "feat": ["travis-org", "scrutinizer", "coveralls"]},
+      {"name": "chain", "desc": "Extensional logic layers for request/response flows", "feat": ["travis", "scrutinizer", "coveralls"]},
       {"name": "timer"}
     ]
   },
   "Discovery": {
     "sub": [
-      {"name": "consul", "desc": "Service registry/discovery and kv-store"}
+      {"name": "consul", "desc": "Service registry/discovery and kv-store", "feat":  ["travis", "scrutinizer", "coveralls"]}
     ]
   },
   "DevOps": {
     "sub": [
-      {"name": "monitor", "desc": "Prometheus metrics pull/push", "feat": ["travis", "coveralls"]},
-      {"name": "tracing", "desc": "OpenTracing collector"},
-      {"name": "traced", "desc": "Jaeger/zipkin platform"},
-      {"name": "log", "desc": "Dynamic logging format/receiver and supports logs replication"}
+      {"name": "monitor", "desc": "Prometheus metrics pull/push", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "tracing", "desc": "OpenTracing collector", "feat": ["scrutinizer"]},
+      {"name": "traced", "desc": "Jaeger/zipkin platform", "feat": ["scrutinizer"]},
+      {"name": "log", "desc": "Dynamic logging format/receiver and supports logs replication", "feat": ["scrutinizer"]}
     ]
   },
   "Resources": {
     "sub": [
-      {"name": "config", "desc": "Dynamic config in-flight, backend supports Consul", "feat": ["travis", "coveralls"]},
-      {"name": "cluster", "desc": "Clustered resources made easy"},
-      {"name": "pool", "desc": "Connection pool for everything", "feat": ["travis", "coveralls"]}
+      {"name": "config", "desc": "Dynamic config in-flight, backend supports Consul", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "cluster", "desc": "Clustered resources made easy", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "pool", "desc": "Connection pool for everything", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   },
   "Servers": {
     "sub": [
-      {"name": "console"},
+      {"name": "console", "desc": "Application startup based chip", "feat": ["travis", "scrutinizer", "coveralls"]},
       {"name": "serving", "desc": "Shared server features"},
-      {"name": "web", "desc": "Flexible routes and controller powered"}
+      {"name": "web", "desc": "Flexible routes and controller powered", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   },
   "RPC": {
     "sub": [
-      {"name": "rpc", "desc": "RPC protocol base"},
-      {"name": "hrpc", "desc": "HTTP based RPC server"},
-      {"name": "hrpcc", "desc": "HTTP based RPC client"}
+      {"name": "rpc", "desc": "RPC protocol base", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "hrpc", "desc": "HTTP based RPC server", "feat": ["scrutinizer"]},
+      {"name": "hrpcc", "desc": "HTTP based RPC client", "feat": ["scrutinizer"]},
+      {"name": "hrpca", "desc": "Accelerated network with TCP for HRPC", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   },
   "Network": {
     "sub": [
-      {"name": "net", "desc": "Base types and APIs contracted", "feat": ["travis", "coveralls"]},
-      {"name": "dns"},
+      {"name": "net", "desc": "Base types and APIs contracted", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "dns", "desc":  "DNS resolver"},
       {"name": "psr7", "desc": "PSR-7 standard implements"},
-      {"name": "http", "desc": "includes Client/Server/WebSocket", "feat": ["travis", "coveralls"]},
-      {"name": "socket"}
+      {"name": "http", "desc": "includes Client/Server/WebSocket", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "socket", "desc":  "TCP/UDP socket"}
     ]
   },
   "Queue": {
     "sub": [
-      {"name": "nsq", "desc": "Publish/consuming with cluster, configurable for online migrating"}
+      {"name": "nsq", "desc": "Publish/consuming with cluster, configurable for online migrating", "feat": ["scrutinizer"]}
     ]
   },
   "Storage": {
     "sub": [
-      {"name": "database", "desc": "Supports MySQL", "feat": ["travis", "coveralls"]},
-      {"name": "redis", "feat": ["travis", "coveralls"]},
-      {"name": "mysql", "desc": "SQL builder for MySQL", "feat": ["travis", "coveralls"]},
-      {"name": "cache", "feat": ["travis", "coveralls"]}
+      {"name": "database", "desc": "Supports MySQL", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "redis", "desc": "Supports Redis", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "mysql", "desc": "SQL builder for MySQL", "feat": ["travis", "scrutinizer", "coveralls"]},
+      {"name": "cache", "desc": "Multi-backend and pure cache API", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   },
   "Utils": {
     "sub": [
-      {"name": "dsn", "feat": ["travis-org"]},
-      {"name": "env", "feat": ["travis"]},
+      {"name": "dsn", "desc": "DSN parser", "feat": ["travis-org", "scrutinizer", "coveralls"]},
+      {"name": "env", "desc": "ENV parser", "feat": ["travis", "scrutinizer", "coveralls"]},
       {"name": "i18n"},
-      {"name": "process"},
-      {"name": "shaping"},
-      {"name": "validator", "feat": ["travis", "coveralls"]}
+      {"name": "process", "desc": "Multi-process coordination framework"},
+      {"name": "shaping", "desc": "Token-Bucket based shaping control"},
+      {"name": "validator", "feat": ["travis", "scrutinizer", "coveralls"]}
     ]
   }
 }

@@ -17,6 +17,7 @@
     "carno-php/dsn": "~1.0@dev",
     "carno-php/env": "~1.0@dev",
     "carno-php/hrpc": "~1.0@dev",
+    "carno-php/hrpca": "~1.0@dev",
     "carno-php/hrpcc": "~1.0@dev",
     "carno-php/http": "~1.0@dev",
     "carno-php/i18n": "~1.0@dev",
